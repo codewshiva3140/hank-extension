@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Hank Panic on Wrong LeetCode",
+  "version": "1.0",
+  "description": "Shows Hank when your LeetCode answer is wrong.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "https://*.leetcode.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/*",
+        "https://*.leetcode.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["hank.gif"],
+      "matches": [
+        "https://leetcode.com/*",
+        "https://*.leetcode.com/*"
+      ]
+    }
+  ]
+}
